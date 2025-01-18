@@ -5,17 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Previsioni Meteo</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="container mt-5">
         <h1 class="text-center">Previsioni Meteo</h1>
-        <canvas id="weatherChart" width="400" height="200"></canvas>
+        <form id="weatherForm" class="text-center mb-4">
+            <input type="text" id="cityInput" class="form-control" placeholder="Inserisci il nome della città" required>
+            <button type="submit" class="btn btn-primary mt-2">Mostra Previsioni</button>
+        </form>
+        <div class="chart-container">
+            <canvas id="weatherChart"></canvas>
+        </div>
+        <div class="weather-code" id="weatherCodeDisplay">
+            <!-- I codici meteo verranno visualizzati qui -->
+        </div>
+        <div class="time-segment" id="timeSegments">
+            <!-- Le fasce orarie verranno visualizzate qui -->
+        </div>
+        
+        <div class="date-buttons">
+            <button class="btn btn-secondary date-button" id="17/01">17/01</button>
+            <button class="btn btn-secondary date-button" id="18/01">18/01</button>
+            <button class="btn btn-secondary date-button" id="19/01">19/01</button>
+            <button class="btn btn-secondary date-button" id="20/01">20/01</button>
+            <button class="btn btn-secondary date-button" id="21/01">21/01</button>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+    <script src="script.js"></script> 
 </body>
 </html>
